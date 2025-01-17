@@ -234,8 +234,8 @@ def start_auction():
 
     # Schedule the round end using the background version
     non_blocking_delay(auction_data['round_time'], end_round_background)
-    return jsonify(success=True)
-    #return redirect(url_for('admin'))
+    #return jsonify(success=True)
+    return redirect(url_for('admin'))
 
 @app.route('/place_bid', methods=['POST'])
 def place_bid():
